@@ -14,7 +14,7 @@
 	<name>parkingmanagerdemo</name>
 	<description>Gestión de parking del CPIFP</description>
 	<properties>
-		<java.version>19.0.1</java.version>
+		<java.version>19</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -37,6 +37,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+	<dependency>
+		<groupId>org.junit.jupiter</groupId>
+		<artifactId>junit-jupiter</artifactId>
+		<version>5.9.2</version>
+		<scope>test</scope>
+</dependency>
 	</dependencies>
 
 	<build>
@@ -45,6 +51,33 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M7</version>
+		</plugin>
+		<plugin>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>3.0.0-M7</version>
+		</plugin>
+		<plugin>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<executions>
+				<execution>
+					<id>prepare-agent</id>
+					<goals>
+						<goal>prepare-agent</goal>
+					</goals>
+				</execution>
+				<execution>
+					<id>report</id>
+					<phase>test</phase>
+					<goals>
+						<goal>report</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
 		</plugins>
 	</build>
 

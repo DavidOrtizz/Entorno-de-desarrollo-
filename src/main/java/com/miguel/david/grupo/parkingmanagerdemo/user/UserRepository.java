@@ -1,4 +1,4 @@
-package com.miguel.david.grupo.parkingmanagerdemo.user.domain;
+package com.miguel.david.grupo.parkingmanagerdemo.user;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +15,5 @@ public class UserRepository {
     this.usuarios.clear();
     this.usuarios.add(new User("Paco", "Bernadeu", "CampNou", "Alumno"));
     return this.usuarios;
-  }
-
-  public Iterable<User> findAll() {
-    return null;
   }
 }

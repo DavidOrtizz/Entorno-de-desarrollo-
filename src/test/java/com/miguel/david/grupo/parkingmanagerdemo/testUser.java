@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.miguel.david.grupo.parkingmanagerdemo.user.domain.User;
+import com.miguel.david.grupo.parkingmanagerdemo.user.User;
 
 @SpringBootTest
 public class testUser {

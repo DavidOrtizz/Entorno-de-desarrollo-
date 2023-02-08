@@ -1,4 +1,4 @@
-package com.miguel.david.grupo.parkingmanagerdemo.sorteo;
+package com.miguel.david.grupo.sorteo;
 
 import java.util.Date;
 

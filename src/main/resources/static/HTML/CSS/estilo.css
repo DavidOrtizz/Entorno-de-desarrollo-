@@ -14,6 +14,53 @@ header{
 h1.cabezera{
     color:white;
 }
+nav{
+	margin:10px;
+	height:50px;
+	width:auto;
+	background:lightgray;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+    padding-left:10px;
+}
+div.inicio, div.sorteo, div.usuarios,{
+	height:50px;
+	width:150px;
+	background-color:lightgray;
+	float:left;
+	display:flex;
+	align-items:center;
+	margin-left:5px;
+	color:black;
+	justify-content:center;
+	align-items:center;
+	transition:all 2s ease;
+	font-family:"Constantia";
+} 
+div.usuarios:hover{
+	background-color:black;
+	color:white;
+	transition:all 2s ease;
+
+}
+div.sorteo:hover{
+	background-color:black;
+	color:white;
+	transition:all 2s ease;
+
+}
+
+div.inicio:hover{
+	background-color:black;
+	color:white;
+	transition:all 2s ease;
+
+}
+
+h3 > div{
+	align:center;
+}
 div.lista{
     height:50px;
     width:100px;

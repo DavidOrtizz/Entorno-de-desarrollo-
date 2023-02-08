@@ -24,7 +24,7 @@ public class testUser {
     String expected = "David";
 
     // Act
-    String actual = user.getnombre();
+    String actual = user.getNombre();
 
     // Assert
     assertEquals(expected, actual);
@@ -36,7 +36,7 @@ public class testUser {
     String expected = "Ortiz";
 
     // Act
-    String actual = user.getapellido1();
+    String actual = user.getApellido1();
 
     // Assert
     assertEquals(expected, actual);
@@ -48,7 +48,7 @@ public class testUser {
     String expected = "Corchero";
 
     // Act
-    String actual = user.getapellido2();
+    String actual = user.getApellido2();
 
     // Assert
     assertEquals(expected, actual);
@@ -60,7 +60,7 @@ public class testUser {
     String expected = "Alumno";
 
     // Act
-    String actual = user.getrol();
+    String actual = user.getRol();
 
     // Assert
     assertEquals(expected, actual);

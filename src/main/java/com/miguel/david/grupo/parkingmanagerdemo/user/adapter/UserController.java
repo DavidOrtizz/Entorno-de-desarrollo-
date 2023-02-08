@@ -18,6 +18,6 @@ public class UserController {
   @GetMapping("/usuarios")
   public String displayUsers(Model model) {
     model.addAttribute("usuarios", userService.getAll());
-    return "user/listausuarios";
+    return "user/usertlist";
   }
 }

@@ -21,6 +21,8 @@ public class UserRepository {
   }
 
   public Iterable<User> findAll() {
-    return null;
+    this.usuarios.clear();
+    this.usuarios.add(new User("Paco", "Bernadeu", "CampNou", "Alumno"));
+    return this.usuarios;
   }
 }

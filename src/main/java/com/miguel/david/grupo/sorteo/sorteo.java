@@ -2,7 +2,7 @@ package com.miguel.david.grupo.sorteo;
 
 import java.util.Date;
 
-public class sorteo {
+public class Sorteo {
 
   private String descripcion;
   private Date fecha;

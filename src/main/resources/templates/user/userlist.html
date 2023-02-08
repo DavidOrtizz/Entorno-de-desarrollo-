@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="Http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="HTML/CSS/estilo.css">
+    <title>inicio</title>
+</head>
+<body>
+    <header>
+        <h1 class="cabezera">Malaga Tech Park</h1>
+    </header>
+    <main>
+        <h1>Lista de usuarios</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Segundo Apellido</th>
+                </tr>
+            </thead>
+           <tbody>
+            <tr th:each="user: ${usuarios}">
+                <td th:text="${user.nombre}">
+
+                </td>
+                <td th:text="${user.apellido1}">
+
+                </td>
+                <td th:text="${user.apellido2}">
+
+                </td>
+            </tr>
+           </tbody> 
+        </table>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

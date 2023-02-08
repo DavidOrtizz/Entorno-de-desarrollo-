@@ -1,16 +1,16 @@
-package com.miguel.david.grupo.parkingmanagerdemo.user;
+package com.miguel.david.grupo.parkingmanagerdemo.sorteo;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class UserController {
+public class sorteoController {
   private UserRepository repository = new UserRepository();
 
-  @GetMapping("/usuarios")
+  @GetMapping("/sorteo")
   public String displayUsers(Model model) {
-    model.addAttribute("usuarios", repository.getAll());
-    return "user/userlist";
+   model.addAttribute("usuarios", repository.getAll());
+    return "sorteo/sorteo";
   }
 }

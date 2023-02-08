@@ -13,6 +13,7 @@ public class UserRepository {
 
   public List<User> getAll() {
     this.usuarios.clear();
+    this.usuarios.add(new User("Cedric", "Bernadeu", "CampNou", "Alumno"));
     this.usuarios.add(new User("Paco", "Bernadeu", "CampNou", "Alumno"));
     return this.usuarios;
   }

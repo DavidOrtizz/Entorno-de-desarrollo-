@@ -1,5 +1,5 @@
 
-package com.miguel.david.grupo.parkingmanagerdemo.user;
+package com.miguel.david.grupo.parkingmanagerdemo.user.domain;
 
 public class User {
   // Atributos que varían para cada objeto

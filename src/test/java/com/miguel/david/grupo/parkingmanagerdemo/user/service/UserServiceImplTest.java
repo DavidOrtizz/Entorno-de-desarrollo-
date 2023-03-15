@@ -24,7 +24,7 @@ public class UserServiceImplTest {
     when(mockedRepository.findAll()).thenReturn(userMockedList);
     UserService service = new UserServiceImpl(mockedRepository);
 
-    List<User> actualUsers = service.readAll();
+    List<User> actualUsers = (List<User>) service.getAll();
 
     assertEquals(userMockedList, actualUsers);
   }

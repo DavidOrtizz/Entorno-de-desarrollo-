@@ -8,7 +8,7 @@ public class Sorteo {
   private Date fecha;
   private String estado;
 
-  public void Sorteo(String descripcion, Date fecha, String estado) {
+  public Sorteo(String descripcion, Date fecha, String estado) {
     this.descripcion = descripcion;
     this.fecha = fecha;
     this.estado = estado;

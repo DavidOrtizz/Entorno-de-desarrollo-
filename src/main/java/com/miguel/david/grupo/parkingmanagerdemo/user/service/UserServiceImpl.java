@@ -1,5 +1,7 @@
 package com.miguel.david.grupo.parkingmanagerdemo.user.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +20,11 @@ public class UserServiceImpl implements UserService {
 
   public Iterable<User> getAll() {
     return this.userRepository.findAll();
+  }
+
+  @Override
+  public List<User> readAll() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'readAll'");
   }
 }

@@ -1,5 +1,7 @@
 package com.miguel.david.grupo.parkingmanagerdemo.sorteo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +20,11 @@ public class SorteoServiceImpl implements SorteoService {
 
   public Iterable<Sorteo> getAll() {
     return this.sorteoRepository.findAll();
+  }
+
+  @Override
+  public List<Sorteo> readAll() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'readAll'");
   }
 }

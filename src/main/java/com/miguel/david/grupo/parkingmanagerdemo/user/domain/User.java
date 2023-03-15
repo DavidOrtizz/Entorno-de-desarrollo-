@@ -1,8 +1,16 @@
 
 package com.miguel.david.grupo.parkingmanagerdemo.user.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class User {
   // Atributos que varían para cada objeto
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
   private String nombre;
   private String apellido1;

@@ -16,5 +16,7 @@ public class UserServiceImplTest {
     List<User> userMockedList = new ArrayList<>();
     userMockedList.add(new User("Jose", "Perez", "Muñoz", "Alumno"));
     userMockedList.add(new User("Mar", "Del Castillo", "Aragón", "Alumno"));
+
+    UserRepository mockedRepository = mock();
   }
 }

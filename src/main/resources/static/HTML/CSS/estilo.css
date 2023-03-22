@@ -61,16 +61,7 @@ div.inicio:hover{
 h3 > div{
 	align:center;
 }
-div.lista{
-    height:50px;
-    width:100px;
-    background-color: orange;
-    display:block;
-	justify-content:center;
-	align-items:center;
-    border-radius:20px;
-    margin-top:25px;
-}
+
 p{
     margin-left:25px;
     margin-top:10px;

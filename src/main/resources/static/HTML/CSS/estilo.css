@@ -24,7 +24,7 @@ nav{
 	align-items:center;
     padding-left:10px;
 }
-div.inicio, div.sorteo, div.usuarios, div.registro{
+div.inicio, div.sorteo, div.usuarios{
 	height:50px;
 	width:150px;
 	background-color:lightgray;
@@ -58,15 +58,9 @@ div.inicio:hover{
 
 }
 
-div.registro:hover{
-	background-color:black;
-	color:white;
-	transition:all 2s ease;
-
-}
 
 h3 > div{
-	align:center;
+	align-items:center;
 }
 
 p{

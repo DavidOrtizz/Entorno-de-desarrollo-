@@ -5,5 +5,6 @@ public class RegistroService {
   public Object getAll() {
     return null;
   }
-  
+
 }
+

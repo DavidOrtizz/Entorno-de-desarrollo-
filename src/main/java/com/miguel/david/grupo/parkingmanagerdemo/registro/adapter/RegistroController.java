@@ -18,6 +18,7 @@ public class RegistroController {
   @GetMapping("/registro")
   public String displayResgistro(Model model) {
     model.addAttribute("registro", registroService.getAll());
-    return "registro/registro"; 
+    return "registro/registro";
   }
 }
+

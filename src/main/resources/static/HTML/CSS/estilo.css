@@ -24,7 +24,7 @@ nav{
 	align-items:center;
     padding-left:10px;
 }
-div.inicio, div.sorteo, div.usuarios{
+div.inicio, div.sorteo, div.usuarios, div.registro{
 	height:50px;
 	width:150px;
 	background-color:lightgray;
@@ -52,6 +52,13 @@ div.sorteo:hover{
 }
 
 div.inicio:hover{
+	background-color:black;
+	color:white;
+	transition:all 2s ease;
+
+}
+
+div.registro:hover{
 	background-color:black;
 	color:white;
 	transition:all 2s ease;

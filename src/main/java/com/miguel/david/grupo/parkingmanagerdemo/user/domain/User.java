@@ -17,8 +17,6 @@ public class User {
   private String apellido2;
   private String rol;
 
- 
-
   // Hace referencia al objeto asignado
   public User(String nombre, String apellido1, String apellido2, String rol) {
     this.nombre = nombre; // El objeto nombre hace referencia a nombre
@@ -28,8 +26,9 @@ public class User {
   }
 
   public User() {
-    this("","","","");
+    this("", "", "", "");
   }
+
   // Se encarga de devolver el valor de una propiedad
   public String getNombre() { // Valor de nombre
     return this.nombre;

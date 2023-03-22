@@ -24,7 +24,7 @@ nav{
 	align-items:center;
     padding-left:10px;
 }
-div.inicio, div.sorteo, div.usuarios,{
+div.inicio, div.sorteo, div.usuarios{
 	height:50px;
 	width:150px;
 	background-color:lightgray;

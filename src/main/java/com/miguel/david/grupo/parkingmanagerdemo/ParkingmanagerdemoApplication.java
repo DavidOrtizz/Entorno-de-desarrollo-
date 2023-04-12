@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author David Ortiz y Miguel Cedric
  * @version 0.0.1
+ * @since 12/04/2023
  * Hace que la aplicacion inicie
  */
 @SpringBootApplication

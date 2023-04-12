@@ -9,6 +9,7 @@ import jakarta.persistence.Id;
 /**
  * @author David Ortiz y Miguel Cedric
  * @version 0.0.1
+ * @since 12/04/2023
  * Se ocupade de guardar los datos de los usuarios
  */
 @Entity

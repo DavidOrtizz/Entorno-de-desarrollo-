@@ -5,10 +5,12 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * @author David Ortiz y Miguel Cedric
+ * Guarda la informacion de los usuarios
+ * @author Miguel Villoslada
+ * @author David Ortiz
  * @version 0.0.1
  * @since 12/04/2023
- * Guarda la informacion de los usuarios
+ * 
  */
 @Repository
 public interface UserRepository extends CrudRepository<User,Long> {

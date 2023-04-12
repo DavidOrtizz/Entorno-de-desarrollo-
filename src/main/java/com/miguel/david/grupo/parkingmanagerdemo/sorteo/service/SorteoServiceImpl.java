@@ -7,8 +7,8 @@ import com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain.SorteoRepository;
 
 /**
  * Se encarga de mostrar toda la información de sorteo
- * 
- * @author David Ortiz Corchero y Miguel Cedric Villoslada Boulanger
+ * @author Miguel Villoslada
+ * @author David Ortiz
  * @version 0.0.1
  * @since 12/04/2023
  */

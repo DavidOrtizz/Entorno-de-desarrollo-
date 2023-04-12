@@ -7,10 +7,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 /**
- * @author David Ortiz y Miguel Cedric
+ * Se ocupade de guardar los datos de los usuarios
+ * @author Miguel Villoslada
+ * @author David Ortiz
  * @version 0.0.1
  * @since 12/04/2023
- * Se ocupade de guardar los datos de los usuarios
+ * 
  */
 @Entity
 public class User {

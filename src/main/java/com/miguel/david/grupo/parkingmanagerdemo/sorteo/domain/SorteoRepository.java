@@ -6,7 +6,8 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 /**
- * @author David Ortiz Corchero y Miguel Cedric Villoslada Boulanger
+ * @author Miguel Villoslada
+ * @author David Ortiz
  * @version 0.0.1
  * @since 12/04/2023
  */

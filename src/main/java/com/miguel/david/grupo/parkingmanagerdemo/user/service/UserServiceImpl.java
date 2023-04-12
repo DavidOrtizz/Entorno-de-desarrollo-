@@ -5,10 +5,12 @@ import com.miguel.david.grupo.parkingmanagerdemo.user.domain.User;
 import com.miguel.david.grupo.parkingmanagerdemo.user.domain.UserRepository;
 
 /**
- * @author David Ortiz y Miguel Cedric
+ * Devuelve toda la informacion de los usuarios
+ * @author Miguel Villoslada
+ * @author David Ortiz
  * @version 0.0.1
  * @since 12/04/2023
- * Devuelve toda la informacion de los usuarios
+ * 
  */
 @Service
 public class UserServiceImpl implements UserService {

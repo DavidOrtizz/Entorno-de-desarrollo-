@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 
 /**
  * Se ocupade de guardar los datos de los usuarios
+ * 
  * @author Miguel Villoslada
  * @author David Ortiz
  * @version 0.0.1
@@ -36,47 +37,47 @@ public class User {
   public User() {
     this("", "", "", "");
   }
-  
-  /** 
+
+  /**
    * Se encarga de devolver el valor de una propiedad
+   * 
    * @param nombre Valor de nombre
    * @return String devuelve el nombre
    */
-  public String getNombre() { 
+  public String getNombre() {
     return this.nombre;
   }
 
-  
-  
-  /** 
+  /**
    * Se encarga de darle un valor al nombre
+   * 
    * @param nombre nombre asignado
    */
   public void setNombre(String nombre) {
     this.nombre = nombre;
   }
 
-  
-  /** 
+  /**
    * Se encarga de devolver el primer apellido
+   * 
    * @return String devuelve el primer apellido
    */
   public String getApellido1() {
     return this.apellido1;
   }
 
-  
-  /** 
+  /**
    * Se encarga de darle valor al primer apellido
+   * 
    * @param apellido1 asigna el primer apellido
    */
   public void setApellido1(String apellido1) {
     this.apellido1 = apellido1;
   }
 
-  
-  /** 
+  /**
    * Se encarga de devolver el segundo apellido
+   * 
    * @param apellido2 segundo apellido asignado
    * @return String devuelve el segundo apellido
    */
@@ -84,27 +85,27 @@ public class User {
     return this.apellido2;
   }
 
-  
-  /** 
+  /**
    * Se encarga de darle valor al segundo apellido
+   * 
    * @param apellido2 valor del segundo apellido
    */
   public void setApellido2(String apellido2) {
     this.apellido2 = apellido2;
   }
 
-  
-  /** 
+  /**
    * devuelve el rol
+   * 
    * @return String devuelve el rol
    */
   public String getRol() {
     return this.rol;
   }
 
-  
-  /** 
+  /**
    * Se encarga de darle valor al rol
+   * 
    * @param rol valor del rol
    */
   public void setRol(String rol) {

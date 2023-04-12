@@ -5,24 +5,41 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+/**
+ * @author David Ortiz Corchero y Miguel Cedric Villoslada Boulanger
+ * @version 0.0.1
+ * @since 12/04/2023
+ */
 @Repository
 public class SorteoRepository {
 
   private ArrayList<Sorteo> sorteos;
 
+  /**
+   * Se crea el array de sorteo
+   */
   public SorteoRepository() {
     sorteos = new ArrayList<Sorteo>();
   }
 
+  /**
+   * Se ocupa de devolver todos los sorteos
+   * 
+   * @return List<Sorteo>
+   * 
+   */
   public List<Sorteo> getAll() {
-    this.sorteos.clear();
-    this.sorteos.add(new Sorteo("Descripcion", "14/02/1234", "Hola"));
+    this.sorteos.add(new Sorteo("Descripcion", "14/02/2047", "Hola"));
     return this.sorteos;
   }
 
+  /**
+   * Se encarga de recorrer todos los elementos sorteo
+   * 
+   * @return Iterable<Sorteo>
+   */
   public Iterable<Sorteo> findAll() {
-    this.sorteos.clear();
-    this.sorteos.add(new Sorteo("Descripcion", "14/02/1234", "Hola"));
+    this.sorteos.add(new Sorteo("Descripcion", "14/02/2047", "Hola"));
     return this.sorteos;
   }
 }

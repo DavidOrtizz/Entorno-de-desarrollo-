@@ -1,6 +1,7 @@
 package com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain;
 
 /**
+ * Es el cuerpo principal de sorteo, donde estan todos los atributos importantes
  * 
  * @author Miguel Villoslada
  * @author David Ortiz

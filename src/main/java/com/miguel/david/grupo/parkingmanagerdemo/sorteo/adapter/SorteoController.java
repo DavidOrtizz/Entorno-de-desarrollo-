@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * Se ocupa de devolver los datos de sorteo
+ * 
  * @author Miguel Villoslada
  * @author David Ortiz
  * @version 0.0.1

@@ -7,6 +7,7 @@ import com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain.SorteoRepository;
 
 /**
  * Se encarga de mostrar toda la información de sorteo
+ * 
  * @author Miguel Villoslada
  * @author David Ortiz
  * @version 0.0.1

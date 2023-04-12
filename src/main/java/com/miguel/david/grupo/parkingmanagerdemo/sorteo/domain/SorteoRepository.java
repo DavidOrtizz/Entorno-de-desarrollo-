@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 /**
+ * Es donde se van a guardar los datos de sorteo
+ * 
  * @author Miguel Villoslada
  * @author David Ortiz
  * @version 0.0.1

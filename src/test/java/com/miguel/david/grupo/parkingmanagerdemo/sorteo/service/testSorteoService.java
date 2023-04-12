@@ -11,7 +11,7 @@ import static org.mockito.Mockito.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SorteoServiceTest {
+public class testSorteoService {
   @Test
   void testGetAll() {
     List<Sorteo> sorteoMockedList = new ArrayList<>();

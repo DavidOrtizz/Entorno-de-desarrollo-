@@ -11,7 +11,7 @@ import static org.mockito.Mockito.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserServiceImplTest {
+public class testUserServiceImpl {
   @Test
   void testGetAll() {
     // Arrange

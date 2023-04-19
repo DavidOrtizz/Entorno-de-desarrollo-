@@ -3,6 +3,9 @@ package com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain;
 import java.util.Set;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 
 /**
@@ -15,9 +18,12 @@ import jakarta.persistence.ManyToMany;
  */
 @Entity
 public class Sorteo {
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private long id;
   private String descripcion;
   private String fecha;
-  private String estado;
+  private Estado estado;
 
   /**
    * Son los valores principales de sorteo
@@ -26,12 +32,22 @@ public class Sorteo {
    * @param fecha       se ocupa de guardar la fecha
    * @param estado      se ocupa de guardar el estado en el que se encuantra
    */
-  public Sorteo(String descripcion, String fecha, String estado) {
+  public Sorteo(String descripcion, String fecha, Estado estado) {
     this.descripcion = descripcion;
     this.fecha = fecha;
     this.estado = estado;
   }
+  protected Sorteo(){
+    this("","",null);
+  }
 
+  public long getId() {
+    return id;
+  }
+
+  public void setId(long id) {
+    this.id = id;
+  }
   /**
    * Se encarga de devolver la descripción
    * 
@@ -73,7 +89,7 @@ public class Sorteo {
    * 
    * @return String devolvemos el estado
    */
-  public String getEstado() {
+  public Estado getEstado() {
     return estado;
   }
 
@@ -82,7 +98,7 @@ public class Sorteo {
    * 
    * @param estado añadimos el estado
    */
-  public void setEstado(String estado) {
+  public void setEstado(Estado estado) {
     this.estado = estado;
   }
 

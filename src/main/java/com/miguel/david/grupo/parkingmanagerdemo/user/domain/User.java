@@ -97,10 +97,19 @@ public class User {
     this.apellido2 = apellido2;
   }
 
+  
+  /**
+   * Devuelve el rol
+   *  
+   * @return devuelve Rol
+   */
   public Rol getRol() {
     return rol;
   }
-
+  /**
+   * Guarda el valor de rol
+   *  
+   */
   public void setRol(Rol rol) {
     this.rol = rol;
   }

@@ -23,7 +23,9 @@ public class Sorteo {
   private long id;
   private String descripcion;
   private String fecha;
-  private Estado estado;
+  private String estado;
+  @ManyToMany
+  private Set<Sorteo> includedSorteo;
 
   /**
    * Son los valores principales de sorteo
@@ -107,7 +109,4 @@ public class Sorteo {
   public void setEstado(Estado estado) {
     this.estado = estado;
   }
-
-  @ManyToMany
-  private Set<Sorteo> includedSorteo;
 }

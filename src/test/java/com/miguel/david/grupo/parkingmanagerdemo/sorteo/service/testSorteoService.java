@@ -2,6 +2,7 @@ package com.miguel.david.grupo.parkingmanagerdemo.sorteo.service;
 
 import org.junit.jupiter.api.Test;
 
+import com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain.Estado;
 import com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain.Sorteo;
 import com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain.SorteoRepository;
 
@@ -15,8 +16,8 @@ public class testSorteoService {
   @Test
   void testGetAll() {
     List<Sorteo> sorteoMockedList = new ArrayList<>();
-    sorteoMockedList.add(new Sorteo("Hola", "15/03/2023", "Puedes entrar"));
-    sorteoMockedList.add(new Sorteo("Ala", "15/03/2023", "Puedes entrar"));
+    sorteoMockedList.add(new Sorteo("Hola", "15/03/2023", Estado.TERMINADO));
+    sorteoMockedList.add(new Sorteo("Ala", "15/03/2023", Estado.TERMINADO));
 
     SorteoRepository mockedRepository = mock(SorteoRepository.class);
 

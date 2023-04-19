@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain.Estado;
 import com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain.Sorteo;
 
 @SpringBootTest
@@ -15,7 +16,7 @@ public class testSorteo {
 
   @BeforeEach
   public void sorteo() {
-    this.sorteo = new Sorteo("Has ganado", "22/02/2023", "Ganaste");
+    this.sorteo = new Sorteo("Has ganado", "22/02/2023",Estado.TERMINADO);
   }
 
   @Test
@@ -45,10 +46,10 @@ public class testSorteo {
   @Test
   public void check_sorteo_estado() {
     // Arranque
-    String expected = "Ganaste";
+    Estado expected = Estado.TERMINADO;
 
     // Act
-    String actual = sorteo.getEstado();
+    Estado actual = sorteo.getEstado();
 
     // Assert
     assertEquals(expected, actual);

@@ -32,7 +32,7 @@ public class SorteoRepository {
    * 
    */
   public List<Sorteo> getAll() {
-    this.sorteos.add(new Sorteo("Descripcion", "14/02/2047", "Hola"));
+    this.sorteos.add(new Sorteo("Descripcion", "14/02/2047",Estado.NUEVO));
     return this.sorteos;
   }
 
@@ -42,7 +42,7 @@ public class SorteoRepository {
    * @return Iterable<Sorteo>
    */
   public Iterable<Sorteo> findAll() {
-    this.sorteos.add(new Sorteo("Descripcion", "14/02/2047", "Hola"));
+    this.sorteos.add(new Sorteo("Descripcion", "14/02/2047", Estado.TERMINADO));
     return this.sorteos;
   }
 }

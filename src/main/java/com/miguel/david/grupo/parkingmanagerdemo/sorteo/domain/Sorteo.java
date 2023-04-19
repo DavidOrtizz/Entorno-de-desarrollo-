@@ -40,11 +40,17 @@ public class Sorteo {
   protected Sorteo(){
     this("","",null);
   }
-
+ /**
+   * Se encarga de devolver el id 
+   * 
+   * @return devuelve el id
+   */
   public long getId() {
     return id;
   }
-
+ /**
+   * Se encarga de guardar el id 
+   */
   public void setId(long id) {
     this.id = id;
   }

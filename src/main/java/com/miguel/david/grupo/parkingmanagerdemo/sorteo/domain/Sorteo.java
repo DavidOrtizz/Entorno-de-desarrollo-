@@ -1,5 +1,10 @@
 package com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain;
 
+import java.util.Set;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
+
 /**
  * Es el cuerpo principal de sorteo, donde estan todos los atributos importantes
  * 
@@ -8,6 +13,7 @@ package com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain;
  * @version 0.0.1
  * @since 12/04/2023
  */
+@Entity
 public class Sorteo {
   private String descripcion;
   private String fecha;
@@ -79,4 +85,7 @@ public class Sorteo {
   public void setEstado(String estado) {
     this.estado = estado;
   }
+
+  @ManyToMany
+  private Set<Sorteo> includedSorteo;
 }

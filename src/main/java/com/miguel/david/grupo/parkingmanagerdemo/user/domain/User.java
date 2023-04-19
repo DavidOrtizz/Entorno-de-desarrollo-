@@ -1,10 +1,13 @@
 
 package com.miguel.david.grupo.parkingmanagerdemo.user.domain;
 
+import java.util.Set;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 
 /**
  * Se ocupade de guardar los datos de los usuarios
@@ -111,4 +114,7 @@ public class User {
   public void setRol(String rol) {
     this.rol = rol;
   }
+
+  @ManyToMany(mappedBy = "includedSorteo")
+  private Set<User> includedUser;
 }

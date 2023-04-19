@@ -24,10 +24,10 @@ public class User {
   private String nombre;
   private String apellido1;
   private String apellido2;
-  private String rol;
+  private Rol rol;
 
   // Hace referencia al objeto asignado
-  public User(String nombre, String apellido1, String apellido2, String rol) {
+  public User(String nombre, String apellido1, String apellido2, Rol rol) {
     this.nombre = nombre; // El objeto nombre hace referencia a nombre
     this.apellido1 = apellido1;
     this.apellido2 = apellido2;
@@ -35,7 +35,7 @@ public class User {
   }
 
   public User() {
-    this("", "", "", "");
+    this("", "", "",null);
   }
 
   /**
@@ -94,21 +94,12 @@ public class User {
     this.apellido2 = apellido2;
   }
 
-  /**
-   * devuelve el rol
-   * 
-   * @return String devuelve el rol
-   */
-  public String getRol() {
-    return this.rol;
+  public Rol getRol() {
+    return rol;
   }
 
-  /**
-   * Se encarga de darle valor al rol
-   * 
-   * @param rol valor del rol
-   */
-  public void setRol(String rol) {
+  public void setRol(Rol rol) {
     this.rol = rol;
   }
+ 
 }

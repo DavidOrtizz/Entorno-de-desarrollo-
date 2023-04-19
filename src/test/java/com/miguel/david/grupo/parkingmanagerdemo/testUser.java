@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.miguel.david.grupo.parkingmanagerdemo.user.domain.Rol;
 import com.miguel.david.grupo.parkingmanagerdemo.user.domain.User;
 
 @SpringBootTest
@@ -15,7 +16,7 @@ public class testUser {
 
   @BeforeEach
   public void user() {
-    this.user = new User("David", "Ortiz", "Corchero", "Alumno");
+    this.user = new User("David", "Ortiz", "Corchero",Rol.ESTUDIANTE);
   }
 
   @Test
@@ -57,10 +58,10 @@ public class testUser {
   @Test
   public void check_user_rol() {
     // Arranque
-    String expected = "Alumno";
+    Rol expected = Rol.ESTUDIANTE;
 
     // Act
-    String actual = user.getRol();
+    Rol actual = user.getRol();
 
     // Assert
     assertEquals(expected, actual);

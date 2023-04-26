@@ -30,7 +30,7 @@ public class User {
   private String apellido1;
   private String apellido2;
   private Rol rol;
-  @ManyToMany(mappedBy = "includedSorteo")
+ @ManyToMany(mappedBy = "includedSorteo")
   private Set<User> includedUser;
 
   // Hace referencia al objeto asignado

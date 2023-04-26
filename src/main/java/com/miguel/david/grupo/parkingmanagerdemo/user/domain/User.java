@@ -2,6 +2,7 @@ package com.miguel.david.grupo.parkingmanagerdemo.user.domain;
 
 import java.util.Set;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,8 +22,10 @@ import jakarta.persistence.ManyToMany;
 public class User {
   // Atributos que varían para cada objeto
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(unique = true)
+  private String email;
   private String nombre;
   private String apellido1;
   private String apellido2;

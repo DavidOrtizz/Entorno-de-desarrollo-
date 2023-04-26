@@ -23,7 +23,7 @@ public class Sorteo {
   private long id;
   private String descripcion;
   private String fecha;
-  private String estado;
+  private Estado estado;
   @ManyToMany
   private Set<Sorteo> includedSorteo;
 
@@ -39,23 +39,27 @@ public class Sorteo {
     this.fecha = fecha;
     this.estado = estado;
   }
-  protected Sorteo(){
-    this("","",null);
+
+  protected Sorteo() {
+    this("", "", null);
   }
- /**
-   * Se encarga de devolver el id 
+
+  /**
+   * Se encarga de devolver el id
    * 
    * @return devuelve el id
    */
   public long getId() {
     return id;
   }
- /**
-   * Se encarga de guardar el id 
+
+  /**
+   * Se encarga de guardar el id
    */
   public void setId(long id) {
     this.id = id;
   }
+
   /**
    * Se encarga de devolver la descripción
    * 

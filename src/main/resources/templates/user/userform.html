@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/src/main/resources/static/HTML/CSS/estilo.css">
+  <title>Formulario para usuario</title>
+</head>
+<style>
+  legend{
+    color: red;
+  }
+</style>
+<body>
+  <header>
+    <h1 class="cabezera">Malaga Tech Park</h1>
+</header>
+<nav>
+    <a href="index.html">		
+        <div class="inicio">
+            <h3>&nbsp;Inicio&nbsp;</h3>
+        </div>
+    </a>
+    <a href="/usuarios">
+    <div class="usuarios">
+        <h3>&nbsp;Usuarios&nbsp;</h3>
+    </div>
+    </a>
+    <a href="/sorteo">
+    <div class="sorteo">
+        <h3>&nbsp;Sorteo&nbsp;</h3>
+    </div>
+    </a>
+</nav>
+<main>
+  <form th:action="@{/newUser}" th:object="${user}"action="#" method="post">
+    <fieldset>
+        <legend>Datos usuario</legend>
+        <p>Email del usuario</p>
+        <p><input th:field="*{email}" type="email" placeholder="ejemplo@hotmail.com"></p>
+        <p>Nombre del usuario</p>
+        <p><input th:field="*{nombre}" type="text" placeholder="Pepe"></p>
+        <p>Primer apellido del usuario</p>
+        <p><input th:field="*{apellido1}" type="text" placeholder="Ferrero"></p>
+        <p>Segundo apellido del usuaio</p>
+        <p><input th:field="*{apellido2}" type="text" placeholder="Flores"></p>
+      </fieldset>
+      <fieldset>
+        <legend>Detalles usuario</legend>
+        <p>Selecciona tu rol</p>
+          <p>
+            <select th:field="*{rol}">
+              <option th:each="rol: ${roles}" 
+                      th:value="${rol}" 
+                      th:text="${rol.getDisplayName()}">
+              </option>
+          </select>
+          </p>
+      </fieldset>
+      <p><button type="submit">Crear</button></p>
+  </form>
+  <br>
+      <p><a href="/src/main/resources/static/index.html"><button>Volver al inicio</button></a></p>
+</main>
+<footer>
+        <p>Malaga Tech Park</p>
+</footer>
+</body>
+</html>

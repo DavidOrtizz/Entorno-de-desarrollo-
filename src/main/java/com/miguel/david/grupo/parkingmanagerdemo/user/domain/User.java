@@ -31,6 +31,8 @@ public class User {
   private String apellido1;
   private String apellido2;
   private Rol rol;
+  @ManyToMany(mappedBy = "includedSorteo")
+  private Set<User> includedUser;
 
   // Hace referencia al objeto asignado
   public User(String nombre, String apellido1, String apellido2, Rol rol) {
@@ -41,7 +43,7 @@ public class User {
   }
 
   public User() {
-    this("", "", "",null);
+    this("", "", "", null);
   }
 
   /**
@@ -116,7 +118,4 @@ public class User {
   public void setRol(Rol rol) {
     this.rol = rol;
   }
-
-  @ManyToMany(mappedBy = "includedSorteo")
-  private Set<User> includedUser;
 }

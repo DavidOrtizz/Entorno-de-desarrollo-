@@ -54,18 +54,18 @@ public class testUserServiceImpl {
   }
 
   @Test
-  void testUserAlreadyExists(){
+  void testUserAlreadyExists() {
     // Arrange
-      UserRepository mockRepository = mock(UserRepository.class);
-      UserDao userDao = new UserDao("david@correo", "David", "Ortiz", "Corchero", Rol.ESTUDIANTE);
-      when(mockRepository.findByEmail("david@correo")).thenReturn(new User("david@correo","David","Ortiz","Corchero",Rol.ESTUDIANTE));
-    
-      UserService service = new UserServiceImpl(mockRepository);
+    UserRepository mockRepository = mock(UserRepository.class);
+    UserDao userDao = new UserDao("david@correo", "David", "Ortiz", "Corchero", Rol.ESTUDIANTE);
+    when(mockRepository.findByEmail("david@correo")).thenReturn(new User("david@correo", "David", "Ortiz", "Corchero", Rol.ESTUDIANTE));
+
+    UserService service = new UserServiceImpl(mockRepository);
 
     // Act
-    assertThrows(UserExistsException.class, 
-    ()->{
-      service.register(userDao);
-    });
+    assertThrows(UserExistsException.class,
+        () -> {
+          service.register(userDao);
+        });
   }
 }

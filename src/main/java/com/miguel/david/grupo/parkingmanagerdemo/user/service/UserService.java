@@ -1,6 +1,8 @@
 package com.miguel.david.grupo.parkingmanagerdemo.user.service;
 
+import com.miguel.david.grupo.parkingmanagerdemo.core.exception.UserExistsException;
 import com.miguel.david.grupo.parkingmanagerdemo.user.domain.User;
+import com.miguel.david.grupo.parkingmanagerdemo.user.domain.UserDao;
 
 /**
  * Gestiona todos los usuarios
@@ -14,6 +16,6 @@ import com.miguel.david.grupo.parkingmanagerdemo.user.domain.User;
 public interface UserService {
 
   public Iterable<User> getAll();
-
+  public void register(UserDao userDao) throws UserExistsException;
   public boolean userExists(String email);
 }

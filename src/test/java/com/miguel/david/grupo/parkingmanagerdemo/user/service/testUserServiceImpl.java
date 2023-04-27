@@ -58,7 +58,7 @@ public class testUserServiceImpl {
     // Arrange
       UserRepository mockRepository = mock(UserRepository.class);
       UserDao userDao = new UserDao("david@correo", "David", "Ortiz", "Corchero", Rol.ESTUDIANTE);
-      when(mockRepository.findByEmail("david@correo")).thenReturn(new User("david@correo","David","Ortiz","Corchero",Rol.ESTUDIANTE));
+      when(mockRepository.findByEmail("david@correo")).thenReturn(new User("david@correo","David","Ortiz",Rol.ESTUDIANTE));
     
       UserService service = new UserServiceImpl(mockRepository);
 

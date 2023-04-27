@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.miguel.david.grupo.parkingmanagerdemo.core.exception.UserExistsException;
 import com.miguel.david.grupo.parkingmanagerdemo.user.domain.User;
+import com.miguel.david.grupo.parkingmanagerdemo.user.domain.UserDao;
 import com.miguel.david.grupo.parkingmanagerdemo.user.domain.UserRepository;
 
 /**
@@ -34,6 +35,16 @@ public class UserServiceImpl implements UserService {
     return this.userRepository.findAll();
   }
 
+  public void registrer(UserDao userDao) throws UserExistsException{
+    if (userExists(userDao.getEmail())) {
+      throw new UserExistsException();
+    }
+    User user = new User();
+    BeanUtils.copyProperties(userDao, user);
+    this.userRepository.save(user);
+  }
+
+
   public void register(com.miguel.david.grupo.parkingmanagerdemo.user.domain.UserDao UserDao) throws UserExistsException{
     if (userExists(UserDao.getEmail())) {
       throw new UserExistsException();
@@ -43,9 +54,10 @@ public class UserServiceImpl implements UserService {
     this.userRepository.save(user);
   }
 
-
+  @Override
   public boolean userExists(String email) {
      return this.userRepository.findByEmail(email) != null ? true : false;
   }
-
+  
+  
 }

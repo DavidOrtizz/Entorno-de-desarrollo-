@@ -2,6 +2,8 @@ package com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain;
 
 import java.util.Set;
 
+import com.miguel.david.grupo.parkingmanagerdemo.user.domain.User;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,8 +26,8 @@ public class Sorteo {
   private String descripcion;
   private String fecha;
   private Estado estado;
-  @ManyToMany
-  private Set<Sorteo> includedSorteo;
+  @ManyToMany(mappedBy = "includedIn")
+  private Set<User> usersIncuded;
 
   /**
    * Son los valores principales de sorteo
@@ -40,7 +42,7 @@ public class Sorteo {
     this.estado = estado;
   }
 
-  protected Sorteo() {
+  public Sorteo() {
     this("", "", null);
   }
 

@@ -1,5 +1,8 @@
 package com.miguel.david.grupo.parkingmanagerdemo.user.adapter;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -8,6 +11,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.miguel.david.grupo.parkingmanagerdemo.core.exception.UserExistsException;
+import com.miguel.david.grupo.parkingmanagerdemo.user.domain.Rol;
+import com.miguel.david.grupo.parkingmanagerdemo.user.domain.UserDao;
 import com.miguel.david.grupo.parkingmanagerdemo.user.service.UserService;
 
 import jakarta.validation.Valid;

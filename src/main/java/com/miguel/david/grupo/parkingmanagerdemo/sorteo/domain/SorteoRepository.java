@@ -3,8 +3,8 @@ package com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-
 /**
  * Es donde se van a guardar los datos de sorteo
  * 
@@ -13,17 +13,17 @@ import org.springframework.stereotype.Repository;
  * @version 0.0.1
  * @since 12/04/2023
  */
-@Repository
-public class SorteoRepository {
+//@Repository
+//public class SorteoRepository {
 
-  private ArrayList<Sorteo> sorteos;
+  //private ArrayList<Sorteo> sorteos;
 
   /**
    * Se crea el array de sorteo
    */
-  public SorteoRepository() {
-    sorteos = new ArrayList<Sorteo>();
-  }
+  //public SorteoRepository() {
+    //sorteos = new ArrayList<Sorteo>();
+  //}
 
   /**
    * Se ocupa de devolver todos los sorteos
@@ -31,18 +31,21 @@ public class SorteoRepository {
    * @return List<Sorteo>
    * 
    */
-  public List<Sorteo> getAll() {
-    this.sorteos.add(new Sorteo("Descripcion", "14/02/2047",Estado.NUEVO));
-    return this.sorteos;
-  }
+  //public List<Sorteo> getAll() {
+    //this.sorteos.add(new Sorteo("Descripcion", "14/02/2047",Estado.NUEVO));
+    //return this.sorteos;
+  //}
 
   /**
    * Se encarga de recorrer todos los elementos sorteo
    * 
    * @return Iterable<Sorteo>
    */
-  public Iterable<Sorteo> findAll() {
-    this.sorteos.add(new Sorteo("Descripcion", "14/02/2047", Estado.TERMINADO));
-    return this.sorteos;
-  }
+  //public Iterable<Sorteo> findAll() {
+    //this.sorteos.add(new Sorteo("Descripcion", "14/02/2047", Estado.TERMINADO));
+    //return this.sorteos;
+  //}
+//}
+public interface SorteoRepository extends CrudRepository<Sorteo, Long>{
+
 }

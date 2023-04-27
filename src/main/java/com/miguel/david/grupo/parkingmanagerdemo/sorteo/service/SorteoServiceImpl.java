@@ -1,9 +1,13 @@
 package com.miguel.david.grupo.parkingmanagerdemo.sorteo.service;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain.Sorteo;
+import com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain.SorteoDao;
 import com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain.SorteoRepository;
+
+import ch.qos.logback.core.joran.util.beans.BeanUtil;
 
 /**
  * Se encarga de mostrar toda la información de sorteo
@@ -26,7 +30,7 @@ public class SorteoServiceImpl implements SorteoService {
   public SorteoServiceImpl(SorteoRepository sorteoRepository) {
     this.sorteoRepository = sorteoRepository;
   }
-
+  @Override
   /**
    * Se encarga de devolver todos los sorteos
    * 
@@ -35,5 +39,16 @@ public class SorteoServiceImpl implements SorteoService {
   public Iterable<Sorteo> getAll() {
     return this.sorteoRepository.findAll();
   }
+  @Override
+    public Sorteo getUltimoSorteo(){
+      throw new UnsupportedOperationException("mwtodo no implementado , getUltimoSorteo");
+  }
+  @Override
+  public void register(SorteoDao sorteoDao) {
+    Sorteo sorteo = new Sorteo();
+    BeanUtils.copyProperties(sorteoDao, sorteo);
+    this.sorteoRepository.save(sorteo);
+  }
 
 }
+  

@@ -2,11 +2,15 @@ package com.miguel.david.grupo.parkingmanagerdemo.user.domain;
 
 import java.util.Set;
 
+import com.miguel.david.grupo.parkingmanagerdemo.sorteo.domain.Sorteo;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 
 /**
@@ -30,8 +34,14 @@ public class User {
   private String apellido1;
   private String apellido2;
   private Rol rol;
- @ManyToMany(mappedBy = "includedSorteo")
-  private Set<User> includedUser;
+ @ManyToMany
+ @JoinTable(
+   name="usuarios_asignados",
+   joinColumns = @JoinColumn(name="usuario_id"),
+   inverseJoinColumns = @JoinColumn(name="sorteo_id")
+ )
+  private Set<Sorteo> includedIn;
+  
 
   // Hace referencia al objeto asignado
   public User(String nombre, String apellido1, String apellido2, Rol rol) {
